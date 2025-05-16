@@ -1,5 +1,5 @@
 fun checkInRange(date: MyDate, first: MyDate, last: MyDate): Boolean {
-    return TODO()
+    return date in first..last
 }
 
 
@@ -11,5 +11,10 @@ data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int) : Comparab
     }
 }
 
-//1..10
-//"a".."z"
+fun main() {
+    val date = MyDate(2023, 6, 15)
+    val start = MyDate(2023, 1, 1)
+    val end = MyDate(2023, 12, 31)
+
+    println(checkInRange(date, start, end))
+}

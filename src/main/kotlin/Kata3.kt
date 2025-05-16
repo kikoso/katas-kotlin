@@ -1,9 +1,9 @@
 package org.example
 
-fun eval(expr: Expr): Int =
+fun evaluate(expr: Expr): Int =
     when (expr) {
-        is Num -> TODO()
-        is Sum -> TODO()
+        is Num -> expr.value
+        is Sum ->  evaluate(expr.left) + evaluate(expr.right)
         else -> throw IllegalArgumentException("Unknown expression")
     }
 

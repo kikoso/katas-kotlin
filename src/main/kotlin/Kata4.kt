@@ -1,8 +1,8 @@
 package org.example
 
 //as
-import kotlin.random.Random
-import java.util.Random
+import kotlin.random.Random as KRandom
+import java.util.Random as JRandom
 
 fun useDifferentRandomClasses(): String {
     return "Kotlin random: " +
